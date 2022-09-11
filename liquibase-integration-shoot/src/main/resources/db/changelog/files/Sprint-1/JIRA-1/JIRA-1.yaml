@@ -1,0 +1,28 @@
+databaseChangeLog:
+  - changeSet:  
+      id:  1-Creating user details for liquibase testing  
+      author:  Abhishek Malvadkar  
+      changes:  
+       - sql: 
+            comment: Creating user details for liquibase testing   
+            splitStatements:  true  
+            sql: |-
+                  CREATE TABLE `user_details` (
+                  `ID` INT NOT NULL AUTO_INCREMENT,
+                  `USER_NAME` VARCHAR(45) NOT NULL,
+                  PRIMARY KEY (`ID`));
+            stripComments:  false
+  - changeSet:  
+      id:  2-Creating post details table for liquibase testing  
+      author:  Abhishek Malvadkar  
+      changes:  
+       - sql: 
+            comment: Creating post details table for liquibase testing  
+            splitStatements:  true  
+            sql: |-
+                  CREATE TABLE `post_details` (
+                  `ID` INT NOT NULL AUTO_INCREMENT,
+                  `POST_TITLE` VARCHAR(45) NOT NULL,
+                  PRIMARY KEY (`ID`));
+            stripComments:  false          
+

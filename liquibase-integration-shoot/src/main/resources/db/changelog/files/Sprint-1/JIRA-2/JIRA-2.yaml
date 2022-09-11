@@ -1,0 +1,24 @@
+databaseChangeLog:
+  - changeSet:  
+      id:  1-updating post details table with created on column  
+      author:  Abhishek Malvadkar  
+      changes:  
+       - sql: 
+            comment: updating post details table with created on column 
+            splitStatements:  true  
+            sql: |-
+                  ALTER TABLE `post_details` 
+                  ADD COLUMN `CREATED_ON` DATETIME NOT NULL AFTER `POST_TITLE`;
+            stripComments:  false
+  - changeSet:  
+      id:  2-updating user details table with created on column  
+      author:  Abhishek Malvadkar  
+      changes:  
+       - sql: 
+            comment: updating user details table with created on column  
+            splitStatements:  true  
+            sql: |-
+                  ALTER TABLE `user_details` 
+                  ADD COLUMN `CREATED_ON` DATETIME NOT NULL AFTER `USER_NAME`;
+            stripComments:  false       
+
